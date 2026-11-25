@@ -102,6 +102,12 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="36TET21SSVX" resolve="State" />
     </node>
+    <node concept="1TJgyj" id="36TET21T4N2" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692803266" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="guard" />
+      <ref role="20lvS9" node="36TET21T4MG" resolve="Expression" />
+    </node>
   </node>
   <node concept="1TIwiD" id="36TET21SSX7">
     <property role="EcuMT" value="3583083615692754759" />
@@ -265,6 +271,125 @@
       <property role="20kJfa" value="type" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="36TET21T4jA" resolve="Type" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MG">
+    <property role="EcuMT" value="3583083615692803244" />
+    <property role="TrG5h" value="Expression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MH">
+    <property role="EcuMT" value="3583083615692803245" />
+    <property role="TrG5h" value="BinaryExpression" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="36TET21T4MG" resolve="Expression" />
+    <node concept="1TJgyj" id="36TET21T4MI" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692803246" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="left" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T4MG" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T4MJ" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692803247" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="right" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T4MG" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T4ML">
+    <property role="EcuMT" value="3583083615692803249" />
+    <property role="TrG5h" value="AndExpr" />
+    <property role="34LRSv" value="and" />
+    <ref role="1TJDcQ" node="36TET21T4MH" resolve="BinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MN">
+    <property role="EcuMT" value="3583083615692803251" />
+    <property role="TrG5h" value="OrExpr" />
+    <property role="34LRSv" value="or" />
+    <ref role="1TJDcQ" node="36TET21T4MH" resolve="BinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MO">
+    <property role="EcuMT" value="3583083615692803252" />
+    <property role="TrG5h" value="CompareExpr" />
+    <property role="34LRSv" value="compare" />
+    <ref role="1TJDcQ" node="36TET21T4MH" resolve="BinaryExpression" />
+    <node concept="1TJgyi" id="36TET21T4MP" role="1TKVEl">
+      <property role="IQ2nx" value="3583083615692803253" />
+      <property role="TrG5h" value="op" />
+      <ref role="AX2Wp" node="36TET21T4jn" resolve="CompareOp" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MQ">
+    <property role="EcuMT" value="3583083615692803254" />
+    <property role="TrG5h" value="NotExpr" />
+    <property role="34LRSv" value="not" />
+    <ref role="1TJDcQ" node="36TET21T4MG" resolve="Expression" />
+    <node concept="1TJgyj" id="36TET21T4MR" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692803255" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="operand" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T4MG" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MS">
+    <property role="EcuMT" value="3583083615692803256" />
+    <property role="TrG5h" value="VarRef" />
+    <property role="34LRSv" value="ref" />
+    <ref role="1TJDcQ" node="36TET21T4MG" resolve="Expression" />
+    <node concept="1TJgyj" id="36TET21T4MT" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692803257" />
+      <property role="20kJfa" value="variable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T4jF" resolve="Variable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MU">
+    <property role="EcuMT" value="3583083615692803258" />
+    <property role="TrG5h" value="IntLiteral" />
+    <property role="34LRSv" value="int" />
+    <ref role="1TJDcQ" node="36TET21T4MG" resolve="Expression" />
+    <node concept="1TJgyi" id="36TET21T4MV" role="1TKVEl">
+      <property role="IQ2nx" value="3583083615692803259" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="36TET21T4MW" role="1TKVEl">
+      <property role="IQ2nx" value="3583083615692803260" />
+      <property role="TrG5h" value="unit" />
+      <ref role="AX2Wp" node="36TET21T4jl" resolve="UnitKind" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MX">
+    <property role="EcuMT" value="3583083615692803261" />
+    <property role="TrG5h" value="BoolLiteral" />
+    <property role="34LRSv" value="boolean" />
+    <ref role="1TJDcQ" node="36TET21T4MG" resolve="Expression" />
+    <node concept="1TJgyi" id="36TET21T4MY" role="1TKVEl">
+      <property role="IQ2nx" value="3583083615692803262" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T4MZ">
+    <property role="EcuMT" value="3583083615692803263" />
+    <property role="TrG5h" value="InStateExpr" />
+    <property role="34LRSv" value="in" />
+    <ref role="1TJDcQ" node="36TET21T4MG" resolve="Expression" />
+    <node concept="1TJgyj" id="36TET21T4N0" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692803264" />
+      <property role="20kJfa" value="device" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21SSX7" resolve="Device" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T4N1" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692803265" />
+      <property role="20kJfa" value="state" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21SSVX" resolve="State" />
     </node>
   </node>
 </model>

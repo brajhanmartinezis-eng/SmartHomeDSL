@@ -12,6 +12,7 @@
         <reference id="3583083615692754756" name="source" index="2Kmyjk" />
         <reference id="3583083615692754757" name="event" index="2Kmyjl" />
         <reference id="3583083615692754758" name="target" index="2Kmyjm" />
+        <child id="3583083615692803266" name="guard" index="2Knuti" />
       </concept>
       <concept id="3583083615692754759" name="smarthome.structure.Device" flags="ng" index="2Kmyjn">
         <reference id="3583083615692754765" name="initial" index="2Kmyjt" />
@@ -24,6 +25,18 @@
         <child id="3583083615692754769" name="devices" index="2Kmyj1" />
       </concept>
       <concept id="3583083615692754685" name="smarthome.structure.State" flags="ng" index="2KmylH" />
+      <concept id="3583083615692803252" name="smarthome.structure.CompareExpr" flags="ng" index="2Knus$" />
+      <concept id="3583083615692803256" name="smarthome.structure.VarRef" flags="ng" index="2KnusC">
+        <reference id="3583083615692803257" name="variable" index="2KnusD" />
+      </concept>
+      <concept id="3583083615692803258" name="smarthome.structure.IntLiteral" flags="ng" index="2KnusE">
+        <property id="3583083615692803259" name="value" index="2KnusF" />
+        <property id="3583083615692803260" name="unit" index="2KnusG" />
+      </concept>
+      <concept id="3583083615692803245" name="smarthome.structure.BinaryExpression" flags="ng" index="2KnusX">
+        <child id="3583083615692803246" name="left" index="2KnusY" />
+        <child id="3583083615692803247" name="right" index="2KnusZ" />
+      </concept>
       <concept id="3583083615692801256" name="smarthome.structure.RangeType" flags="ng" index="2KnuXS">
         <property id="3583083615692801257" name="min" index="2KnuXT" />
         <property id="3583083615692801258" name="max" index="2KnuXU" />
@@ -57,6 +70,15 @@
         <ref role="2Kmyjk" node="36TET21T4je" resolve="Apagada" />
         <ref role="2Kmyjl" node="36TET21T4jf" resolve="toggle" />
         <ref role="2Kmyjm" node="36TET21T4ji" resolve="Encendida" />
+        <node concept="2Knus$" id="36TET21T5$i" role="2Knuti">
+          <node concept="2KnusC" id="36TET21T5$l" role="2KnusY">
+            <ref role="2KnusD" node="36TET21T4Ms" resolve="brillo" />
+          </node>
+          <node concept="2KnusE" id="36TET21T5$n" role="2KnusZ">
+            <property role="2KnusF" value="50" />
+            <property role="2KnusG" value="36TET21T4js/percent" />
+          </node>
+        </node>
       </node>
       <node concept="2KmyiC" id="36TET21T4jk" role="2Kmyjr">
         <ref role="2Kmyjk" node="36TET21T4ji" resolve="Encendida" />
