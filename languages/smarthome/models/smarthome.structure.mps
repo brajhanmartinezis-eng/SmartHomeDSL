@@ -27,6 +27,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -117,6 +118,9 @@
     <node concept="PrWs8" id="36TET21SSX8" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="36TET21T6wH" role="PzmwI">
+      <ref role="PrY4T" node="36TET21T6wG" resolve="IAnalyzable" />
+    </node>
     <node concept="1TJgyj" id="36TET21SSX9" role="1TKVEi">
       <property role="IQ2ns" value="3583083615692754761" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -158,8 +162,11 @@
     <property role="34LRSv" value="smarthome" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="36TET21SSXg" role="PzmwI">
+    <node concept="PrWs8" id="36TET21T6wJ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="36TET21SSXg" role="PzmwI">
+      <ref role="PrY4T" node="36TET21T6wG" resolve="IAnalyzable" />
     </node>
     <node concept="1TJgyj" id="36TET21SSXh" role="1TKVEi">
       <property role="IQ2ns" value="3583083615692754769" />
@@ -454,8 +461,11 @@
     <property role="TrG5h" value="Rule" />
     <property role="34LRSv" value="rule" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="36TET21T5$x" role="PzmwI">
+    <node concept="PrWs8" id="36TET21T6wI" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="36TET21T5$x" role="PzmwI">
+      <ref role="PrY4T" node="36TET21T6wG" resolve="IAnalyzable" />
     </node>
     <node concept="1TJgyj" id="36TET21T5$y" role="1TKVEi">
       <property role="IQ2ns" value="3583083615692806434" />
@@ -487,6 +497,10 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="36TET21T5$p" resolve="ScenarioStep" />
     </node>
+  </node>
+  <node concept="PlHQZ" id="36TET21T6wG">
+    <property role="EcuMT" value="3583083615692810284" />
+    <property role="TrG5h" value="IAnalyzable" />
   </node>
 </model>
 
