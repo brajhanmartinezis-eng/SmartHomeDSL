@@ -23,6 +23,8 @@
       </concept>
       <concept id="3583083615692754767" name="smarthome.structure.SmartHome" flags="ng" index="2Kmyjv">
         <child id="3583083615692754769" name="devices" index="2Kmyj1" />
+        <child id="3583083615692806440" name="rules" index="2KnvaS" />
+        <child id="3583083615692806441" name="scenarios" index="2KnvaT" />
       </concept>
       <concept id="3583083615692754685" name="smarthome.structure.State" flags="ng" index="2KmylH" />
       <concept id="3583083615692803252" name="smarthome.structure.CompareExpr" flags="ng" index="2Knus$" />
@@ -32,6 +34,10 @@
       <concept id="3583083615692803258" name="smarthome.structure.IntLiteral" flags="ng" index="2KnusE">
         <property id="3583083615692803259" name="value" index="2KnusF" />
         <property id="3583083615692803260" name="unit" index="2KnusG" />
+      </concept>
+      <concept id="3583083615692803263" name="smarthome.structure.InStateExpr" flags="ng" index="2KnusJ">
+        <reference id="3583083615692803264" name="device" index="2Knutg" />
+        <reference id="3583083615692803265" name="state" index="2Knuth" />
       </concept>
       <concept id="3583083615692803245" name="smarthome.structure.BinaryExpression" flags="ng" index="2KnusX">
         <child id="3583083615692803246" name="left" index="2KnusY" />
@@ -44,6 +50,17 @@
       <concept id="3583083615692801259" name="smarthome.structure.Variable" flags="ng" index="2KnuXV">
         <property id="3583083615692801261" name="unit" index="2KnuXX" />
         <child id="3583083615692801262" name="type" index="2KnuXY" />
+      </concept>
+      <concept id="3583083615692806426" name="smarthome.structure.FireAction" flags="ng" index="2Knvaa">
+        <reference id="3583083615692806427" name="device" index="2Knvab" />
+        <reference id="3583083615692806428" name="event" index="2Knvac" />
+      </concept>
+      <concept id="3583083615692806432" name="smarthome.structure.Rule" flags="ng" index="2KnvaK">
+        <child id="3583083615692806434" name="when" index="2KnvaM" />
+        <child id="3583083615692806435" name="then" index="2KnvaN" />
+      </concept>
+      <concept id="3583083615692806436" name="smarthome.structure.Scenario" flags="ng" index="2KnvaO">
+        <child id="3583083615692806438" name="steps" index="2KnvaQ" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -59,6 +76,9 @@
       <ref role="2Kmyjt" node="36TET21T4je" resolve="Apagada" />
       <node concept="2KmyiA" id="36TET21T4jf" role="2Kmyjq">
         <property role="TrG5h" value="toggle" />
+      </node>
+      <node concept="2KmyiA" id="36TET21T6wy" role="2Kmyjq">
+        <property role="TrG5h" value="encender" />
       </node>
       <node concept="2KmylH" id="36TET21T4je" role="2Kmyjp">
         <property role="TrG5h" value="Apagada" />
@@ -92,6 +112,42 @@
           <property role="2KnuXT" value="0" />
           <property role="2KnuXU" value="100" />
         </node>
+      </node>
+    </node>
+    <node concept="2Kmyjn" id="36TET21T6ws" role="2Kmyj1">
+      <property role="TrG5h" value="Alarma" />
+      <ref role="2Kmyjt" node="36TET21T6wt" resolve="Armada" />
+      <node concept="2KmylH" id="36TET21T6wt" role="2Kmyjp">
+        <property role="TrG5h" value="Armada" />
+      </node>
+      <node concept="2KmylH" id="36TET21T6wu" role="2Kmyjp">
+        <property role="TrG5h" value="Disparada" />
+      </node>
+      <node concept="2KmyiA" id="36TET21T6wv" role="2Kmyjq">
+        <property role="TrG5h" value="intruso" />
+      </node>
+      <node concept="2KmyiC" id="36TET21T6wx" role="2Kmyjr">
+        <ref role="2Kmyjk" node="36TET21T6wt" resolve="Armada" />
+        <ref role="2Kmyjl" node="36TET21T6wv" resolve="intruso" />
+        <ref role="2Kmyjm" node="36TET21T6wu" resolve="Disparada" />
+      </node>
+    </node>
+    <node concept="2KnvaK" id="36TET21T6w$" role="2KnvaS">
+      <property role="TrG5h" value="AlarmaEnciendeLuz" />
+      <node concept="2KnusJ" id="36TET21T6w_" role="2KnvaM">
+        <ref role="2Knutg" node="36TET21T6ws" resolve="Alarma" />
+        <ref role="2Knuth" node="36TET21T6wu" resolve="Disparada" />
+      </node>
+      <node concept="2Knvaa" id="36TET21T6wA" role="2KnvaN">
+        <ref role="2Knvab" node="36TET21T4jd" resolve="Luz" />
+        <ref role="2Knvac" node="36TET21T6wy" resolve="encender" />
+      </node>
+    </node>
+    <node concept="2KnvaO" id="36TET21T6wE" role="2KnvaT">
+      <property role="TrG5h" value="Robo" />
+      <node concept="2Knvaa" id="36TET21T6wF" role="2KnvaQ">
+        <ref role="2Knvab" node="36TET21T6ws" resolve="Alarma" />
+        <ref role="2Knvac" node="36TET21T6wv" resolve="intruso" />
       </node>
     </node>
   </node>

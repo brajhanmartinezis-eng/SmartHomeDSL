@@ -168,6 +168,20 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="36TET21SSX7" resolve="Device" />
     </node>
+    <node concept="1TJgyj" id="36TET21T5$C" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806440" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rules" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="36TET21T5$w" resolve="Rule" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T5$D" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806441" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="scenarios" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="36TET21T5$$" resolve="Scenario" />
+    </node>
   </node>
   <node concept="25R3W" id="36TET21T4jl">
     <property role="3F6X1D" value="3583083615692801237" />
@@ -390,6 +404,88 @@
       <property role="20kJfa" value="state" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="36TET21SSVX" resolve="State" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T5$p">
+    <property role="EcuMT" value="3583083615692806425" />
+    <property role="TrG5h" value="ScenarioStep" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="36TET21T5$q">
+    <property role="EcuMT" value="3583083615692806426" />
+    <property role="TrG5h" value="FireAction" />
+    <property role="34LRSv" value="fire" />
+    <ref role="1TJDcQ" node="36TET21T5$p" resolve="ScenarioStep" />
+    <node concept="1TJgyj" id="36TET21T5$r" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806427" />
+      <property role="20kJfa" value="device" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21SSX7" resolve="Device" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T5$s" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806428" />
+      <property role="20kJfa" value="event" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21SSWQ" resolve="Event" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T5$t">
+    <property role="EcuMT" value="3583083615692806429" />
+    <property role="TrG5h" value="SetVar" />
+    <property role="34LRSv" value="set" />
+    <ref role="1TJDcQ" node="36TET21T5$p" resolve="ScenarioStep" />
+    <node concept="1TJgyj" id="36TET21T5$u" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806430" />
+      <property role="20kJfa" value="variable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T4jF" resolve="Variable" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T5$v" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806431" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T4MG" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T5$w">
+    <property role="EcuMT" value="3583083615692806432" />
+    <property role="TrG5h" value="Rule" />
+    <property role="34LRSv" value="rule" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="36TET21T5$x" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T5$y" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806434" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="when" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T4MZ" resolve="InStateExpr" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T5$z" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806435" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="then" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="36TET21T5$q" resolve="FireAction" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="36TET21T5$$">
+    <property role="EcuMT" value="3583083615692806436" />
+    <property role="TrG5h" value="Scenario" />
+    <property role="34LRSv" value="scenario" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="36TET21T5$_" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="36TET21T5$A" role="1TKVEi">
+      <property role="IQ2ns" value="3583083615692806438" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="steps" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="36TET21T5$p" resolve="ScenarioStep" />
     </node>
   </node>
 </model>
