@@ -7,6 +7,241 @@
   <imports>
     <import index="vbi9" ref="91080703-fc5d-424e-8b1f-838723c8acc7/i:f010101(smarthome/smarthome@descriptor)" />
   </imports>
-  <registry />
+  <registry>
+    <language id="91080703-fc5d-424e-8b1f-838723c8acc7" name="smarthome">
+      <concept id="3583083615692754742" name="smarthome.structure.Event" flags="ng" index="2KmyiA" />
+      <concept id="3583083615692754744" name="smarthome.structure.Transition" flags="ng" index="2KmyiC">
+        <reference id="3583083615692754756" name="source" index="2Kmyjk" />
+        <reference id="3583083615692754757" name="event" index="2Kmyjl" />
+        <reference id="3583083615692754758" name="target" index="2Kmyjm" />
+        <child id="3583083615692803266" name="guard" index="2Knuti" />
+      </concept>
+      <concept id="3583083615692754759" name="smarthome.structure.Device" flags="ng" index="2Kmyjn">
+        <reference id="3583083615692754765" name="initial" index="2Kmyjt" />
+        <child id="3583083615692754761" name="states" index="2Kmyjp" />
+        <child id="3583083615692754762" name="events" index="2Kmyjq" />
+        <child id="3583083615692754763" name="transitions" index="2Kmyjr" />
+        <child id="3583083615692801263" name="variables" index="2KnuXZ" />
+      </concept>
+      <concept id="3583083615692754767" name="smarthome.structure.SmartHome" flags="ng" index="2Kmyjv">
+        <child id="3583083615692754769" name="devices" index="2Kmyj1" />
+      </concept>
+      <concept id="3583083615692754685" name="smarthome.structure.State" flags="ng" index="2KmylH" />
+      <concept id="3583083615692803252" name="smarthome.structure.CompareExpr" flags="ng" index="2Knus$" />
+      <concept id="3583083615692803256" name="smarthome.structure.VarRef" flags="ng" index="2KnusC">
+        <reference id="3583083615692803257" name="variable" index="2KnusD" />
+      </concept>
+      <concept id="3583083615692803258" name="smarthome.structure.IntLiteral" flags="ng" index="2KnusE">
+        <property id="3583083615692803259" name="value" index="2KnusF" />
+        <property id="3583083615692803260" name="unit" index="2KnusG" />
+      </concept>
+      <concept id="3583083615692803261" name="smarthome.structure.BoolLiteral" flags="ng" index="2KnusH">
+        <property id="3583083615692803262" name="value" index="2KnusI" />
+      </concept>
+      <concept id="3583083615692803245" name="smarthome.structure.BinaryExpression" flags="ng" index="2KnusX">
+        <child id="3583083615692803246" name="left" index="2KnusY" />
+        <child id="3583083615692803247" name="right" index="2KnusZ" />
+      </concept>
+      <concept id="3583083615692801256" name="smarthome.structure.RangeType" flags="ng" index="2KnuXS">
+        <property id="3583083615692801257" name="min" index="2KnuXT" />
+        <property id="3583083615692801258" name="max" index="2KnuXU" />
+      </concept>
+      <concept id="3583083615692801259" name="smarthome.structure.Variable" flags="ng" index="2KnuXV">
+        <property id="3583083615692801261" name="unit" index="2KnuXX" />
+        <child id="3583083615692801262" name="type" index="2KnuXY" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="2Kmyjv" id="1NEo9MVEjd5">
+    <property role="TrG5h" value="Invalido_Scoping" />
+    <node concept="2Kmyjn" id="36TET21T4jd" role="2Kmyj1">
+      <property role="TrG5h" value="Luz" />
+      <ref role="2Kmyjt" node="36TET21T4je" resolve="Apagada" />
+      <node concept="2KmyiA" id="36TET21T4jf" role="2Kmyjq">
+        <property role="TrG5h" value="toggle" />
+      </node>
+      <node concept="2KmyiA" id="36TET21T6wy" role="2Kmyjq">
+        <property role="TrG5h" value="encender" />
+      </node>
+      <node concept="2KmylH" id="36TET21T4je" role="2Kmyjp">
+        <property role="TrG5h" value="Apagada" />
+      </node>
+      <node concept="2KmylH" id="36TET21T4ji" role="2Kmyjp">
+        <property role="TrG5h" value="Encendida" />
+      </node>
+      <node concept="2KmyiC" id="36TET21T4jj" role="2Kmyjr">
+        <ref role="2Kmyjk" node="36TET21T4je" resolve="Apagada" />
+        <ref role="2Kmyjl" node="36TET21T4jf" resolve="toggle" />
+        <ref role="2Kmyjm" node="36TET21T4ji" resolve="Encendida" />
+        <node concept="2Knus$" id="36TET21T5$i" role="2Knuti">
+          <node concept="2KnusC" id="36TET21T5$l" role="2KnusY">
+            <ref role="2KnusD" node="36TET21T4Ms" resolve="brillo" />
+          </node>
+          <node concept="2KnusE" id="36TET21T5$n" role="2KnusZ">
+            <property role="2KnusF" value="50" />
+            <property role="2KnusG" value="36TET21T4js/percent" />
+          </node>
+        </node>
+      </node>
+      <node concept="2KmyiC" id="36TET21T4jk" role="2Kmyjr">
+        <ref role="2Kmyjk" node="36TET21T4ji" resolve="Encendida" />
+        <ref role="2Kmyjl" node="36TET21T4jf" resolve="toggle" />
+        <ref role="2Kmyjm" node="36TET21T4je" resolve="Apagada" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEj4H" role="2Kmyjr">
+        <ref role="2Kmyjk" node="36TET21T4je" resolve="Apagada" />
+        <ref role="2Kmyjl" node="36TET21T6wy" resolve="encender" />
+        <ref role="2Kmyjm" node="36TET21T4ji" resolve="Encendida" />
+      </node>
+      <node concept="2KnuXV" id="36TET21T4Ms" role="2KnuXZ">
+        <property role="TrG5h" value="brillo" />
+        <property role="2KnuXX" value="36TET21T4js/percent" />
+        <node concept="2KnuXS" id="36TET21T4Mu" role="2KnuXY">
+          <property role="2KnuXT" value="0" />
+          <property role="2KnuXU" value="100" />
+        </node>
+      </node>
+    </node>
+    <node concept="2Kmyjn" id="36TET21T6ws" role="2Kmyj1">
+      <property role="TrG5h" value="Alarma" />
+      <ref role="2Kmyjt" node="36TET21T6wt" resolve="Armada" />
+      <node concept="2KmylH" id="36TET21T6wt" role="2Kmyjp">
+        <property role="TrG5h" value="Armada" />
+      </node>
+      <node concept="2KmylH" id="36TET21T6wu" role="2Kmyjp">
+        <property role="TrG5h" value="Disparada" />
+      </node>
+      <node concept="2KmyiA" id="36TET21T6wv" role="2Kmyjq">
+        <property role="TrG5h" value="intruso" />
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVEj4J" role="2Kmyjq">
+        <property role="TrG5h" value="desarmar" />
+      </node>
+      <node concept="2KmyiC" id="36TET21T6wx" role="2Kmyjr">
+        <ref role="2Kmyjk" node="36TET21T6wt" resolve="Armada" />
+        <ref role="2Kmyjl" node="36TET21T6wv" resolve="intruso" />
+        <ref role="2Kmyjm" node="36TET21T6wu" resolve="Disparada" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEj4K" role="2Kmyjr">
+        <ref role="2Kmyjk" node="36TET21T6wu" resolve="Disparada" />
+        <ref role="2Kmyjl" node="1NEo9MVEj4J" resolve="desarmar" />
+        <ref role="2Kmyjm" node="36TET21T6wt" resolve="Armada" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEjd$" role="2Kmyjr">
+        <ref role="2Kmyjk" node="36TET21T4je" resolve="Apagada" />
+        <ref role="2Kmyjl" node="36TET21T4jf" resolve="toggle" />
+        <ref role="2Kmyjm" node="36TET21T4ji" resolve="Encendida" />
+        <node concept="2Knus$" id="1NEo9MVEjd_" role="2Knuti">
+          <node concept="2KnusC" id="1NEo9MVEjdA" role="2KnusY">
+            <ref role="2KnusD" node="36TET21T4Ms" resolve="brillo" />
+          </node>
+          <node concept="2KnusE" id="1NEo9MVEjdB" role="2KnusZ">
+            <property role="2KnusF" value="50" />
+            <property role="2KnusG" value="36TET21T4js/percent" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2Kmyjv" id="1NEo9MVEjdO">
+    <property role="TrG5h" value="Invalido_tipos" />
+    <node concept="2Kmyjn" id="1NEo9MVEjdP" role="2Kmyj1">
+      <property role="TrG5h" value="Sensor" />
+      <ref role="2Kmyjt" node="1NEo9MVEjdQ" resolve="Inactivo" />
+      <node concept="2KmylH" id="1NEo9MVEjdQ" role="2Kmyjp">
+        <property role="TrG5h" value="Inactivo" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVEjdV" role="2Kmyjp">
+        <property role="TrG5h" value="Activo" />
+      </node>
+      <node concept="2KnuXV" id="1NEo9MVEjdR" role="2KnuXZ">
+        <property role="TrG5h" value="temp" />
+        <property role="2KnuXX" value="36TET21T4jm/celsius" />
+        <node concept="2KnuXS" id="1NEo9MVEjdT" role="2KnuXY">
+          <property role="2KnuXT" value="0" />
+          <property role="2KnuXU" value="40" />
+        </node>
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVEjdW" role="2Kmyjq">
+        <property role="TrG5h" value="medir" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEjdY" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVEjdQ" resolve="Inactivo" />
+        <ref role="2Kmyjl" node="1NEo9MVEjdW" resolve="medir" />
+        <ref role="2Kmyjm" node="1NEo9MVEjdV" resolve="Activo" />
+        <node concept="2Knus$" id="1NEo9MVEjdZ" role="2Knuti">
+          <node concept="2KnusC" id="1NEo9MVEjec" role="2KnusY">
+            <ref role="2KnusD" node="1NEo9MVEjdR" resolve="temp" />
+          </node>
+          <node concept="2KnusE" id="1NEo9MVEje$" role="2KnusZ">
+            <property role="2KnusF" value="50" />
+            <property role="2KnusG" value="36TET21T4js/percent" />
+          </node>
+        </node>
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEjg6" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVEjdV" resolve="Activo" />
+        <ref role="2Kmyjl" node="1NEo9MVEjdW" resolve="medir" />
+        <ref role="2Kmyjm" node="1NEo9MVEjdQ" resolve="Inactivo" />
+        <node concept="2Knus$" id="1NEo9MVEjgc" role="2Knuti">
+          <node concept="2KnusH" id="1NEo9MVEjgU" role="2KnusZ">
+            <property role="2KnusI" value="true" />
+          </node>
+          <node concept="2KnusC" id="1NEo9MVEjgI" role="2KnusY" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2Kmyjv" id="1NEo9MVEjhk">
+    <property role="TrG5h" value="Invalido_Contexto" />
+    <node concept="2Kmyjn" id="1NEo9MVEjhl" role="2Kmyj1">
+      <property role="TrG5h" value="Luz" />
+      <ref role="2Kmyjt" node="1NEo9MVEjhm" resolve="Apagada" />
+      <node concept="2KmylH" id="1NEo9MVEjhm" role="2Kmyjp">
+        <property role="TrG5h" value="Apagada" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVEjhv" role="2Kmyjp">
+        <property role="TrG5h" value="Apagada" />
+      </node>
+      <node concept="2KnuXV" id="1NEo9MVEjhn" role="2KnuXZ">
+        <property role="TrG5h" value="brillo" />
+        <property role="2KnuXX" value="36TET21T4js/percent" />
+        <node concept="2KnuXS" id="1NEo9MVEjhp" role="2KnuXY">
+          <property role="2KnuXT" value="0" />
+          <property role="2KnuXU" value="100" />
+        </node>
+      </node>
+      <node concept="2KnuXV" id="1NEo9MVEjhr" role="2KnuXZ">
+        <property role="TrG5h" value="nivel" />
+        <property role="2KnuXX" value="36TET21T4js/percent" />
+        <node concept="2KnuXS" id="1NEo9MVEjht" role="2KnuXY">
+          <property role="2KnuXT" value="10" />
+          <property role="2KnuXU" value="5" />
+        </node>
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVEjhw" role="2Kmyjq">
+        <property role="TrG5h" value="toggle" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEjhx" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVEjhm" resolve="Apagada" />
+        <ref role="2Kmyjl" node="1NEo9MVEjhw" resolve="toggle" />
+        <ref role="2Kmyjm" node="1NEo9MVEjhv" resolve="Apagada" />
+        <node concept="2Knus$" id="1NEo9MVEjhy" role="2Knuti">
+          <node concept="2KnusC" id="1NEo9MVEjit" role="2KnusY">
+            <ref role="2KnusD" node="1NEo9MVEjhn" resolve="brillo" />
+          </node>
+          <node concept="2KnusE" id="1NEo9MVEjhJ" role="2KnusZ">
+            <property role="2KnusF" value="150" />
+            <property role="2KnusG" value="36TET21T4js/percent" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 
