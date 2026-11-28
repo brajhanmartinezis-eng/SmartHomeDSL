@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:1507d287-627d-412f-ad6b-eff22262c79f(smarthome.sandbox.invalidos)">
   <persistence version="9" />
+  <attribute name="doNotGenerate" value="true" />
   <languages>
     <use id="91080703-fc5d-424e-8b1f-838723c8acc7" name="smarthome" version="0" />
   </languages>
@@ -240,6 +241,50 @@
             <property role="2KnusG" value="36TET21T4js/percent" />
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2Kmyjv" id="1NEo9MVFtFT">
+    <property role="TrG5h" value="Invalido_Razonador" />
+    <node concept="2Kmyjn" id="1NEo9MVFtFU" role="2Kmyj1">
+      <property role="TrG5h" value="Puerta" />
+      <ref role="2Kmyjt" node="1NEo9MVFtFV" resolve="Cerrada" />
+      <node concept="2KmylH" id="1NEo9MVFtFV" role="2Kmyjp">
+        <property role="TrG5h" value="Cerrada" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVFtFW" role="2Kmyjp">
+        <property role="TrG5h" value="Abierta" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVFtFX" role="2Kmyjp">
+        <property role="TrG5h" value="Bloqueada" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVFtFY" role="2Kmyjp">
+        <property role="TrG5h" value="Rota" />
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVFtFZ" role="2Kmyjq">
+        <property role="TrG5h" value="abrir" />
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVFtG0" role="2Kmyjq">
+        <property role="TrG5h" value="cerrar" />
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVFtG1" role="2Kmyjq">
+        <property role="TrG5h" value="romper" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVFtG2" role="2Kmyjr">
+        <property role="TrG5h" value="q" />
+        <ref role="2Kmyjk" node="1NEo9MVFtFV" resolve="Cerrada" />
+        <ref role="2Kmyjl" node="1NEo9MVFtFZ" resolve="abrir" />
+        <ref role="2Kmyjm" node="1NEo9MVFtFW" resolve="Abierta" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVFtG7" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVFtFW" resolve="Abierta" />
+        <ref role="2Kmyjl" node="1NEo9MVFtG0" resolve="cerrar" />
+        <ref role="2Kmyjm" node="1NEo9MVFtFV" resolve="Cerrada" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVFtG8" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVFtFW" resolve="Abierta" />
+        <ref role="2Kmyjl" node="1NEo9MVFtG1" resolve="romper" />
+        <ref role="2Kmyjm" node="1NEo9MVFtFY" resolve="Rota" />
       </node>
     </node>
   </node>

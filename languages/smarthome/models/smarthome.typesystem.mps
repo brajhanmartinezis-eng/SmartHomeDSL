@@ -9,8 +9,12 @@
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" />
     <import index="adc" ref="r:d53bf3f5-0ee9-4707-9e6b-54d60f45a1a4(smarthome.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="m9rf" ref="r:ef1a8c9c-792c-4306-b170-b2b1819a02c0(smarthome.behavior)" implicit="true" />
   </imports>
   <registry>
+    <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
+      <concept id="3235159848334022093" name="jetbrains.mps.lang.behavior.structure.Node_ConceptMethodCall" flags="nn" index="3zqWPK" />
+    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
@@ -45,6 +49,7 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
         <child id="1068580123160" name="condition" index="3clFbw" />
@@ -60,6 +65,9 @@
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
       <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ngI" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+      </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -73,6 +81,9 @@
       </concept>
     </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
+      <concept id="1207055528241" name="jetbrains.mps.lang.typesystem.structure.WarningStatement" flags="nn" index="a7r0C">
+        <child id="1207055552304" name="warningText" index="a7wSD" />
+      </concept>
       <concept id="1185788614172" name="jetbrains.mps.lang.typesystem.structure.NormalTypeClause" flags="ng" index="mw_s8">
         <child id="1185788644032" name="normalType" index="mwGJk" />
       </concept>
@@ -1308,6 +1319,77 @@
     <node concept="1YaCAy" id="1NEo9MVE7v2" role="1YuTPh">
       <property role="TrG5h" value="t" />
       <ref role="1YaFvo" to="adc:36TET21SSWS" resolve="Transition" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="1NEo9MVFpC9">
+    <property role="TrG5h" value="check_Razonador_Device" />
+    <node concept="3clFbS" id="1NEo9MVFpCa" role="18ibNy">
+      <node concept="2Gpval" id="1NEo9MVFpD4" role="3cqZAp">
+        <node concept="2GrKxI" id="1NEo9MVFpD5" role="2Gsz3X">
+          <property role="TrG5h" value="s" />
+        </node>
+        <node concept="2OqwBi" id="1NEo9MVFpOn" role="2GsD0m">
+          <node concept="1YBJjd" id="1NEo9MVFpDi" role="2Oq$k0">
+            <ref role="1YBMHb" node="1NEo9MVFpCc" resolve="d" />
+          </node>
+          <node concept="3zqWPK" id="1NEo9MVFq0Y" role="2OqNvi">
+            <ref role="37wK5l" to="m9rf:1NEo9MVEPlR" resolve="estadosInalcanzable" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="1NEo9MVFpD7" role="2LFqv$">
+          <node concept="a7r0C" id="1NEo9MVFq8p" role="3cqZAp">
+            <node concept="3cpWs3" id="1NEo9MVFqzT" role="a7wSD">
+              <node concept="2OqwBi" id="1NEo9MVFrlV" role="3uHU7w">
+                <node concept="2OqwBi" id="1NEo9MVFqN2" role="2Oq$k0">
+                  <node concept="1YBJjd" id="1NEo9MVFq$7" role="2Oq$k0">
+                    <ref role="1YBMHb" node="1NEo9MVFpCc" resolve="d" />
+                  </node>
+                  <node concept="3TrEf2" id="1NEo9MVFr5m" role="2OqNvi">
+                    <ref role="3Tt5mk" to="adc:36TET21SSXd" resolve="initial" />
+                  </node>
+                </node>
+                <node concept="3TrcHB" id="1NEo9MVFrMb" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+              <node concept="Xl_RD" id="1NEo9MVFq8y" role="3uHU7B">
+                <property role="Xl_RC" value="R1: estado inalcanzable desde el estado inicial" />
+              </node>
+            </node>
+            <node concept="2GrUjf" id="1NEo9MVFrQd" role="1urrMF">
+              <ref role="2Gs0qQ" node="1NEo9MVFpD5" resolve="s" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="1NEo9MVFs8p" role="3cqZAp">
+        <node concept="2GrKxI" id="1NEo9MVFs8q" role="2Gsz3X">
+          <property role="TrG5h" value="s" />
+        </node>
+        <node concept="2OqwBi" id="1NEo9MVFs8r" role="2GsD0m">
+          <node concept="1YBJjd" id="1NEo9MVFs8s" role="2Oq$k0">
+            <ref role="1YBMHb" node="1NEo9MVFpCc" resolve="d" />
+          </node>
+          <node concept="3zqWPK" id="1NEo9MVFs8t" role="2OqNvi">
+            <ref role="37wK5l" to="m9rf:1NEo9MVFcQr" resolve="estadosMuertos" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="1NEo9MVFs8u" role="2LFqv$">
+          <node concept="a7r0C" id="1NEo9MVFs8v" role="3cqZAp">
+            <node concept="Xl_RD" id="1NEo9MVFs8A" role="a7wSD">
+              <property role="Xl_RC" value="R2: bloquea local, el estado no es final y no tiene salida" />
+            </node>
+            <node concept="2GrUjf" id="1NEo9MVFs8B" role="1urrMF">
+              <ref role="2Gs0qQ" node="1NEo9MVFs8q" resolve="s" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="1NEo9MVFs4j" role="3cqZAp" />
+    </node>
+    <node concept="1YaCAy" id="1NEo9MVFpCc" role="1YuTPh">
+      <property role="TrG5h" value="d" />
+      <ref role="1YaFvo" to="adc:36TET21SSX7" resolve="Device" />
     </node>
   </node>
 </model>
