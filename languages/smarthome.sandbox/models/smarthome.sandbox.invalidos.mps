@@ -39,9 +39,7 @@
         <property id="3583083615692803259" name="value" index="2KnusF" />
         <property id="3583083615692803260" name="unit" index="2KnusG" />
       </concept>
-      <concept id="3583083615692803261" name="smarthome.structure.BoolLiteral" flags="ng" index="2KnusH">
-        <property id="3583083615692803262" name="value" index="2KnusI" />
-      </concept>
+      <concept id="3583083615692803261" name="smarthome.structure.BoolLiteral" flags="ng" index="2KnusH" />
       <concept id="3583083615692803263" name="smarthome.structure.InStateExpr" flags="ng" index="2KnusJ">
         <reference id="3583083615692803264" name="device" index="2Knutg" />
         <reference id="3583083615692803265" name="state" index="2Knuth" />
@@ -183,6 +181,14 @@
           <property role="2KnuXU" value="40" />
         </node>
       </node>
+      <node concept="2KnuXV" id="7anq_Ol0whH" role="2KnuXZ">
+        <property role="TrG5h" value="brillo" />
+        <property role="2KnuXX" value="36TET21T4js/percent" />
+        <node concept="2KnuXS" id="7anq_Ol0wxl" role="2KnuXY">
+          <property role="2KnuXT" value="0" />
+          <property role="2KnuXU" value="100" />
+        </node>
+      </node>
       <node concept="2KmyiA" id="1NEo9MVEjdW" role="2Kmyjq">
         <property role="TrG5h" value="medir" />
       </node>
@@ -200,15 +206,15 @@
           </node>
         </node>
       </node>
-      <node concept="2KmyiC" id="1NEo9MVEjg6" role="2Kmyjr">
+      <node concept="2KmyiC" id="7anq_Ol0wy2" role="2Kmyjr">
         <ref role="2Kmyjk" node="1NEo9MVEjdV" resolve="Activo" />
         <ref role="2Kmyjl" node="1NEo9MVEjdW" resolve="medir" />
-        <ref role="2Kmyjm" node="1NEo9MVEjdQ" resolve="Inactivo" />
-        <node concept="2Knus$" id="1NEo9MVEjgc" role="2Knuti">
-          <node concept="2KnusH" id="1NEo9MVEjgU" role="2KnusZ">
-            <property role="2KnusI" value="true" />
+        <ref role="2Kmyjm" node="1NEo9MVEjdV" resolve="Activo" />
+        <node concept="2Knus$" id="7anq_Ol0wy3" role="2Knuti">
+          <node concept="2KnusC" id="7anq_Ol0wy4" role="2KnusY">
+            <ref role="2KnusD" node="1NEo9MVEjdR" resolve="temp" />
           </node>
-          <node concept="2KnusC" id="1NEo9MVEjgI" role="2KnusY" />
+          <node concept="2KnusH" id="7anq_Ol0wyQ" role="2KnusZ" />
         </node>
       </node>
     </node>
