@@ -49,7 +49,6 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
-      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
         <child id="1068580123160" name="condition" index="3clFbw" />
@@ -1385,7 +1384,29 @@
           </node>
         </node>
       </node>
-      <node concept="3clFbH" id="1NEo9MVFs4j" role="3cqZAp" />
+      <node concept="2Gpval" id="1NEo9MVI$6W" role="3cqZAp">
+        <node concept="2GrKxI" id="1NEo9MVI$6X" role="2Gsz3X">
+          <property role="TrG5h" value="t" />
+        </node>
+        <node concept="2OqwBi" id="1NEo9MVI$6Y" role="2GsD0m">
+          <node concept="1YBJjd" id="1NEo9MVI$6Z" role="2Oq$k0">
+            <ref role="1YBMHb" node="1NEo9MVFpCc" resolve="d" />
+          </node>
+          <node concept="3zqWPK" id="1NEo9MVI$70" role="2OqNvi">
+            <ref role="37wK5l" to="m9rf:1NEo9MVI0UF" resolve="transicionesNoDeterministas" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="1NEo9MVI$71" role="2LFqv$">
+          <node concept="a7r0C" id="1NEo9MVI$72" role="3cqZAp">
+            <node concept="Xl_RD" id="1NEo9MVI$73" role="a7wSD">
+              <property role="Xl_RC" value="R3: no determinismo, otra transicion con el mismo origen y evento puede qctivarse a la vez" />
+            </node>
+            <node concept="2GrUjf" id="1NEo9MVI$74" role="1urrMF">
+              <ref role="2Gs0qQ" node="1NEo9MVI$6X" resolve="t" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="1YaCAy" id="1NEo9MVFpCc" role="1YuTPh">
       <property role="TrG5h" value="d" />

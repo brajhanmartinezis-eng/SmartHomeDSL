@@ -28,7 +28,9 @@
         <child id="3583083615692754769" name="devices" index="2Kmyj1" />
       </concept>
       <concept id="3583083615692754685" name="smarthome.structure.State" flags="ng" index="2KmylH" />
-      <concept id="3583083615692803252" name="smarthome.structure.CompareExpr" flags="ng" index="2Knus$" />
+      <concept id="3583083615692803252" name="smarthome.structure.CompareExpr" flags="ng" index="2Knus$">
+        <property id="3583083615692803253" name="op" index="2Knus_" />
+      </concept>
       <concept id="3583083615692803256" name="smarthome.structure.VarRef" flags="ng" index="2KnusC">
         <reference id="3583083615692803257" name="variable" index="2KnusD" />
       </concept>
@@ -285,6 +287,93 @@
         <ref role="2Kmyjk" node="1NEo9MVFtFW" resolve="Abierta" />
         <ref role="2Kmyjl" node="1NEo9MVFtG1" resolve="romper" />
         <ref role="2Kmyjm" node="1NEo9MVFtFY" resolve="Rota" />
+      </node>
+    </node>
+  </node>
+  <node concept="2Kmyjv" id="1NEo9MVITmB">
+    <property role="TrG5h" value="Invalido_NoDeterminista" />
+    <node concept="2Kmyjn" id="1NEo9MVEj4M" role="2Kmyj1">
+      <property role="TrG5h" value="Termostato" />
+      <ref role="2Kmyjt" node="1NEo9MVEj4N" resolve="Apagado" />
+      <node concept="2KmylH" id="1NEo9MVEj4N" role="2Kmyjp">
+        <property role="TrG5h" value="Apagado" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVEj4U" role="2Kmyjp">
+        <property role="TrG5h" value="Calentando" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVEj4V" role="2Kmyjp">
+        <property role="TrG5h" value="Enfriando" />
+      </node>
+      <node concept="2KnuXV" id="1NEo9MVEj4O" role="2KnuXZ">
+        <property role="TrG5h" value="temp" />
+        <property role="2KnuXX" value="36TET21T4jm/celsius" />
+        <node concept="2KnuXS" id="1NEo9MVEj4Z" role="2KnuXY">
+          <property role="2KnuXT" value="0" />
+          <property role="2KnuXU" value="40" />
+        </node>
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVEj4W" role="2Kmyjq">
+        <property role="TrG5h" value="check" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEj4X" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVEj4N" resolve="Apagado" />
+        <ref role="2Kmyjl" node="1NEo9MVEj4W" resolve="check" />
+        <ref role="2Kmyjm" node="1NEo9MVEj4U" resolve="Calentando" />
+        <node concept="2Knus$" id="1NEo9MVEj51" role="2Knuti">
+          <node concept="2KnusC" id="1NEo9MVEj5e" role="2KnusY">
+            <ref role="2KnusD" node="1NEo9MVEj4O" resolve="temp" />
+          </node>
+          <node concept="2KnusE" id="1NEo9MVEj5A" role="2KnusZ">
+            <property role="2KnusF" value="18" />
+            <property role="2KnusG" value="36TET21T4jm/celsius" />
+          </node>
+        </node>
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEj6c" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVEj4N" resolve="Apagado" />
+        <ref role="2Kmyjl" node="1NEo9MVEj4W" resolve="check" />
+        <ref role="2Kmyjm" node="1NEo9MVEj4V" resolve="Enfriando" />
+        <node concept="2Knus$" id="1NEo9MVEj6d" role="2Knuti">
+          <property role="2Knus_" value="36TET21T4jz/gt" />
+          <node concept="2KnusC" id="1NEo9MVEj7i" role="2KnusY">
+            <ref role="2KnusD" node="1NEo9MVEj4O" resolve="temp" />
+          </node>
+          <node concept="2KnusE" id="1NEo9MVEj7E" role="2KnusZ">
+            <property role="2KnusF" value="15" />
+            <property role="2KnusG" value="36TET21T4jm/celsius" />
+          </node>
+        </node>
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEj8g" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVEj4U" resolve="Calentando" />
+        <ref role="2Kmyjl" node="1NEo9MVEj4W" resolve="check" />
+        <ref role="2Kmyjm" node="1NEo9MVEj4N" resolve="Apagado" />
+        <node concept="2Knus$" id="1NEo9MVEj8h" role="2Knuti">
+          <property role="2Knus_" value="36TET21T4jy/ge" />
+          <node concept="2KnusC" id="1NEo9MVEj8u" role="2KnusY">
+            <ref role="2KnusD" node="1NEo9MVEj4O" resolve="temp" />
+          </node>
+          <node concept="2KnusE" id="1NEo9MVEj8Q" role="2KnusZ">
+            <property role="2KnusF" value="22" />
+            <property role="2KnusG" value="36TET21T4jm/celsius" />
+          </node>
+        </node>
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVEj9s" role="2Kmyjr">
+        <property role="TrG5h" value="e" />
+        <ref role="2Kmyjk" node="1NEo9MVEj4V" resolve="Enfriando" />
+        <ref role="2Kmyjl" node="1NEo9MVEj4W" resolve="check" />
+        <ref role="2Kmyjm" node="1NEo9MVEj4N" resolve="Apagado" />
+        <node concept="2Knus$" id="1NEo9MVEj9E" role="2Knuti">
+          <property role="2Knus_" value="36TET21T4jw/le" />
+          <node concept="2KnusC" id="1NEo9MVEj9R" role="2KnusY">
+            <ref role="2KnusD" node="1NEo9MVEj4O" resolve="temp" />
+          </node>
+          <node concept="2KnusE" id="1NEo9MVEjag" role="2KnusZ">
+            <property role="2KnusF" value="22" />
+            <property role="2KnusG" value="36TET21T4jm/celsius" />
+          </node>
+        </node>
       </node>
     </node>
   </node>
