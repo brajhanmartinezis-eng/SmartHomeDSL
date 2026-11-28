@@ -1413,5 +1413,37 @@
       <ref role="1YaFvo" to="adc:36TET21SSX7" resolve="Device" />
     </node>
   </node>
+  <node concept="18kY7G" id="1NEo9MVJJ0_">
+    <property role="TrG5h" value="check_Razanador_Casa" />
+    <node concept="3clFbS" id="1NEo9MVJJ0A" role="18ibNy">
+      <node concept="2Gpval" id="1NEo9MVJJ26" role="3cqZAp">
+        <node concept="2GrKxI" id="1NEo9MVJJ27" role="2Gsz3X">
+          <property role="TrG5h" value="r" />
+        </node>
+        <node concept="2OqwBi" id="1NEo9MVJJdp" role="2GsD0m">
+          <node concept="1YBJjd" id="1NEo9MVJJ2k" role="2Oq$k0">
+            <ref role="1YBMHb" node="1NEo9MVJJ0C" resolve="h" />
+          </node>
+          <node concept="3zqWPK" id="1NEo9MVJJBY" role="2OqNvi">
+            <ref role="37wK5l" to="m9rf:1NEo9MVJylK" resolve="reglasEnCiclo" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="1NEo9MVJJ29" role="2LFqv$">
+          <node concept="a7r0C" id="1NEo9MVJJJu" role="3cqZAp">
+            <node concept="Xl_RD" id="1NEo9MVJJJB" role="a7wSD">
+              <property role="Xl_RC" value="R4: posible cascada infinita,esta regla participa en un ciclo de reglas" />
+            </node>
+            <node concept="2GrUjf" id="1NEo9MVJJMR" role="1urrMF">
+              <ref role="2Gs0qQ" node="1NEo9MVJJ27" resolve="r" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1NEo9MVJJ0C" role="1YuTPh">
+      <property role="TrG5h" value="h" />
+      <ref role="1YaFvo" to="adc:36TET21SSXf" resolve="SmartHome" />
+    </node>
+  </node>
 </model>
 

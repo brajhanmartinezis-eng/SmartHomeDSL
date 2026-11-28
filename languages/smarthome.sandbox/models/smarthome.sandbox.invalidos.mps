@@ -26,6 +26,7 @@
       </concept>
       <concept id="3583083615692754767" name="smarthome.structure.SmartHome" flags="ng" index="2Kmyjv">
         <child id="3583083615692754769" name="devices" index="2Kmyj1" />
+        <child id="3583083615692806440" name="rules" index="2KnvaS" />
       </concept>
       <concept id="3583083615692754685" name="smarthome.structure.State" flags="ng" index="2KmylH" />
       <concept id="3583083615692803252" name="smarthome.structure.CompareExpr" flags="ng" index="2Knus$">
@@ -41,6 +42,10 @@
       <concept id="3583083615692803261" name="smarthome.structure.BoolLiteral" flags="ng" index="2KnusH">
         <property id="3583083615692803262" name="value" index="2KnusI" />
       </concept>
+      <concept id="3583083615692803263" name="smarthome.structure.InStateExpr" flags="ng" index="2KnusJ">
+        <reference id="3583083615692803264" name="device" index="2Knutg" />
+        <reference id="3583083615692803265" name="state" index="2Knuth" />
+      </concept>
       <concept id="3583083615692803245" name="smarthome.structure.BinaryExpression" flags="ng" index="2KnusX">
         <child id="3583083615692803246" name="left" index="2KnusY" />
         <child id="3583083615692803247" name="right" index="2KnusZ" />
@@ -52,6 +57,14 @@
       <concept id="3583083615692801259" name="smarthome.structure.Variable" flags="ng" index="2KnuXV">
         <property id="3583083615692801261" name="unit" index="2KnuXX" />
         <child id="3583083615692801262" name="type" index="2KnuXY" />
+      </concept>
+      <concept id="3583083615692806426" name="smarthome.structure.FireAction" flags="ng" index="2Knvaa">
+        <reference id="3583083615692806427" name="device" index="2Knvab" />
+        <reference id="3583083615692806428" name="event" index="2Knvac" />
+      </concept>
+      <concept id="3583083615692806432" name="smarthome.structure.Rule" flags="ng" index="2KnvaK">
+        <child id="3583083615692806434" name="when" index="2KnvaM" />
+        <child id="3583083615692806435" name="then" index="2KnvaN" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -374,6 +387,67 @@
             <property role="2KnusG" value="36TET21T4jm/celsius" />
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2Kmyjv" id="1NEo9MVJJNe">
+    <property role="TrG5h" value="Invalido_Cascada" />
+    <node concept="2Kmyjn" id="1NEo9MVJJNf" role="2Kmyj1">
+      <property role="TrG5h" value="Luz" />
+      <ref role="2Kmyjt" node="1NEo9MVJJNg" resolve="Apagada" />
+      <node concept="2KmylH" id="1NEo9MVJJNg" role="2Kmyjp">
+        <property role="TrG5h" value="Apagada" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVJJNh" role="2Kmyjp">
+        <property role="TrG5h" value="Encendida" />
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVJJNi" role="2Kmyjq">
+        <property role="TrG5h" value="encender" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVJJNj" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVJJNg" resolve="Apagada" />
+        <ref role="2Kmyjl" node="1NEo9MVJJNi" resolve="encender" />
+        <ref role="2Kmyjm" node="1NEo9MVJJNh" resolve="Encendida" />
+      </node>
+    </node>
+    <node concept="2Kmyjn" id="1NEo9MVJJNk" role="2Kmyj1">
+      <property role="TrG5h" value="Ventilador" />
+      <ref role="2Kmyjt" node="1NEo9MVJJNl" resolve="Apagado" />
+      <node concept="2KmylH" id="1NEo9MVJJNl" role="2Kmyjp">
+        <property role="TrG5h" value="Apagado" />
+      </node>
+      <node concept="2KmylH" id="1NEo9MVJJNm" role="2Kmyjp">
+        <property role="TrG5h" value="Encendido" />
+      </node>
+      <node concept="2KmyiA" id="1NEo9MVJJNn" role="2Kmyjq">
+        <property role="TrG5h" value="encender" />
+      </node>
+      <node concept="2KmyiC" id="1NEo9MVJJNo" role="2Kmyjr">
+        <ref role="2Kmyjk" node="1NEo9MVJJNl" resolve="Apagado" />
+        <ref role="2Kmyjl" node="1NEo9MVJJNn" resolve="encender" />
+        <ref role="2Kmyjm" node="1NEo9MVJJNm" resolve="Encendido" />
+      </node>
+    </node>
+    <node concept="2KnvaK" id="1NEo9MVJJNp" role="2KnvaS">
+      <property role="TrG5h" value="LuzPrendeVentilador" />
+      <node concept="2KnusJ" id="1NEo9MVJJNq" role="2KnvaM">
+        <ref role="2Knutg" node="36TET21T4jd" resolve="Luz" />
+        <ref role="2Knuth" node="36TET21T4ji" resolve="Encendida" />
+      </node>
+      <node concept="2Knvaa" id="1NEo9MVJJNr" role="2KnvaN">
+        <ref role="2Knvab" node="1NEo9MVJJNk" resolve="Ventilador" />
+        <ref role="2Knvac" node="1NEo9MVJJNn" resolve="encender" />
+      </node>
+    </node>
+    <node concept="2KnvaK" id="1NEo9MVJJN_" role="2KnvaS">
+      <property role="TrG5h" value="VentiladorPrendeLuz" />
+      <node concept="2KnusJ" id="1NEo9MVJJNA" role="2KnvaM">
+        <ref role="2Knutg" node="1NEo9MVJJNk" resolve="Ventilador" />
+        <ref role="2Knuth" node="1NEo9MVJJNm" resolve="Encendido" />
+      </node>
+      <node concept="2Knvaa" id="1NEo9MVJJNB" role="2KnvaN">
+        <ref role="2Knvab" node="1NEo9MVJJNf" resolve="Luz" />
+        <ref role="2Knvac" node="1NEo9MVJJNi" resolve="encender" />
       </node>
     </node>
   </node>
